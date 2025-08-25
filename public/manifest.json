@@ -1,0 +1,84 @@
+{
+  "name": "FamirWebDesign - آژانس طراحی وب حرفه‌ای",
+  "short_name": "FamirWebDesign",
+  "description": "آژانس طراحی وب FamirWebDesign - ارائه خدمات طراحی سایت، توسعه وب، UI/UX و دیجیتال مارکتینگ در تهران",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "lang": "fa",
+  "dir": "rtl",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "خدمات",
+      "short_name": "خدمات",
+      "description": "مشاهده خدمات ما",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/icon-services.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "نمونه کارها",
+      "short_name": "نمونه کارها",
+      "description": "مشاهده نمونه کارهای ما",
+      "url": "/portfolio",
+      "icons": [
+        {
+          "src": "/icon-portfolio.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "تماس",
+      "short_name": "تماس",
+      "description": "تماس با ما",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-contact.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+} 
