@@ -18,13 +18,13 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       "@type": "ListItem",
       "position": 1,
       "name": "خانه",
-      "item": "https://famirwebdesign.com"
+      "item": "https://famir-web-design-5y2a.vercel.app/"
     },
     ...items.map((item, index) => ({
       "@type": "ListItem",
       "position": index + 2,
       "name": item.label,
-      "item": item.href ? `https://famirwebdesign.com${item.href}` : undefined
+      "item": item.href ? `https://famir-web-design-5y2a.vercel.app${item.href}` : undefined
     }))
   ];
 

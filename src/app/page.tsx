@@ -435,7 +435,7 @@ export default function Home() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-cyan-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-cyan-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer"
                     >
                       مشاهده جزئیات
                     </motion.button>
