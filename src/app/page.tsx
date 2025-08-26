@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ArrowDownIcon, CodeBracketIcon, PaintBrushIcon, RocketLaunchIcon, PhoneIcon, EnvelopeIcon, MapPinIcon, SparklesIcon, CubeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+import { ArrowDownIcon, CodeBracketIcon, PaintBrushIcon, RocketLaunchIcon, PhoneIcon, EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 import { useState, useEffect } from 'react';
 import CustomCursor from './components/CustomCursor';
 import SEOHead from './components/SEOHead';
@@ -331,7 +331,7 @@ export default function Home() {
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20, rotateY: -15 }}

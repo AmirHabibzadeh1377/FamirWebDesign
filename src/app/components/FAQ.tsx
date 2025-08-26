@@ -17,14 +17,14 @@ interface FAQProps {
 const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleFAQ = (_index: number) => {
+    setOpenIndex(openIndex === _index ? null : _index);
   };
 
   const faqStructuredData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": items.map((item, index) => ({
+    "mainEntity": items.map((item) => ({
       "@type": "Question",
       "name": item.question,
       "acceptedAnswer": {
@@ -55,23 +55,23 @@ const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" })
         </motion.h2>
         
         <div className="space-y-4">
-          {items.map((item, index) => (
+          {items.map((item, _index) => (
             <motion.div
-              key={index}
+              key={_index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: _index * 0.1 }}
               className="bg-black rounded-2xl border border-white/10 overflow-hidden"
             >
               <button
-                onClick={() => toggleFAQ(index)}
+                onClick={() => toggleFAQ(_index)}
                 className="w-full px-6 py-4 text-right flex items-center justify-between hover:bg-white/5 transition-colors"
-                aria-expanded={openIndex === index}
-                aria-controls={`faq-answer-${index}`}
+                aria-expanded={openIndex === _index}
+                aria-controls={`faq-answer-${_index}`}
               >
                 <span className="text-lg font-semibold text-white">{item.question}</span>
                 <motion.div
-                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  animate={{ rotate: openIndex === _index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
                   <ChevronDownIcon className="h-5 w-5 text-gray-400" />
@@ -79,9 +79,9 @@ const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" })
               </button>
               
               <AnimatePresence>
-                {openIndex === index && (
+                {openIndex === _index && (
                   <motion.div
-                    id={`faq-answer-${index}`}
+                    id={`faq-answer-${_index}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
