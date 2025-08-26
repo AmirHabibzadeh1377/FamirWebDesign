@@ -35,7 +35,7 @@ const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" })
   };
 
   return (
-    <section className="py-16 px-4 bg-gray-900">
+          <section className="py-8 md:py-12 lg:py-16 px-4 bg-gray-900">
       <div className="max-w-4xl mx-auto">
         {/* Structured Data for FAQ */}
         <script
@@ -49,12 +49,12 @@ const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" })
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-black mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-6 md:mb-8 lg:mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
         >
           {title}
         </motion.h2>
         
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4">
           {items.map((item, _index) => (
             <motion.div
               key={_index}
@@ -65,11 +65,11 @@ const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" })
             >
               <button
                 onClick={() => toggleFAQ(_index)}
-                className="w-full px-6 py-4 text-right flex items-center justify-between hover:bg-white/5 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 md:py-4 text-right flex items-center justify-between hover:bg-white/5 transition-colors"
                 aria-expanded={openIndex === _index}
                 aria-controls={`faq-answer-${_index}`}
               >
-                <span className="text-lg font-semibold text-white">{item.question}</span>
+                <span className="text-base sm:text-lg font-semibold text-white">{item.question}</span>
                 <motion.div
                   animate={{ rotate: openIndex === _index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
@@ -88,7 +88,7 @@ const FAQ: React.FC<FAQProps> = ({ items, title = "سوالات متداول" })
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-4 text-gray-300 leading-relaxed">
+                    <div className="px-4 sm:px-6 pb-3 md:pb-4 text-gray-300 leading-relaxed text-sm sm:text-base">
                       {item.answer}
                     </div>
                   </motion.div>

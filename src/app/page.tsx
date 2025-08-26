@@ -54,21 +54,21 @@ const ParticleBackground = () => {
 const FloatingElements = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
     <motion.div
-      className="absolute top-20 left-20 text-4xl opacity-20"
+      className="absolute top-10 sm:top-20 left-10 sm:left-20 text-2xl sm:text-3xl md:text-4xl opacity-20"
       animate={{ rotate: 360, scale: [1, 1.2, 1] }}
       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
     >
       🚀
     </motion.div>
     <motion.div
-      className="absolute top-40 right-20 text-3xl opacity-20"
+      className="absolute top-20 sm:top-40 right-10 sm:right-20 text-xl sm:text-2xl md:text-3xl opacity-20"
       animate={{ y: [0, -20, 0], rotate: [0, 180, 360] }}
       transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
     >
       ⚡
     </motion.div>
     <motion.div
-      className="absolute bottom-40 left-32 text-4xl opacity-20"
+      className="absolute bottom-20 sm:bottom-40 left-16 sm:left-32 text-2xl sm:text-3xl md:text-4xl opacity-20"
       animate={{ x: [0, 20, 0], scale: [1, 1.3, 1] }}
       transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
     >
@@ -198,7 +198,7 @@ export default function Home() {
       <CustomCursor />
       <main className="min-h-screen font-vazir relative">
       {/* Hero Section with Particles */}
-      <section className="h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-blue-900 to-black overflow-hidden">
+      <section className="min-h-screen py-20 md:py-0 md:h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-blue-900 to-black overflow-hidden">
         <ParticleBackground />
         <FloatingElements />
         
@@ -207,9 +207,9 @@ export default function Home() {
           className="absolute inset-0 opacity-20"
           style={{ y: springY }}
         >
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 w-36 h-36 sm:w-56 sm:h-56 md:w-80 md:h-80 bg-cyan-500/20 rounded-full blur-3xl"></div>
         </motion.div>
 
         <motion.div
@@ -225,7 +225,7 @@ export default function Home() {
             transition={{ duration: 1.2, delay: 0.3 }}
             className="mb-8 perspective-1000"
           >
-            <h1 className="text-7xl md:text-9xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-4 md:mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl">
               FamirWebDesign
             </h1>
           </motion.div>
@@ -235,7 +235,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-3xl md:text-4xl text-gray-300 mb-8 font-light"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-4 md:mb-8 font-light"
           >
             آژانس طراحی وب <span className="text-gradient-primary font-bold">حرفه‌ای</span>
           </motion.p>
@@ -244,7 +244,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 md:mb-16 max-w-3xl mx-auto leading-relaxed px-4"
           >
             ما با همسرم، تیم متخصصی هستیم که رویاهای دیجیتال شما را با <span className="text-gradient-secondary font-semibold">خلاقیت</span> و <span className="text-gradient-accent font-semibold">تخصص</span> به واقعیت تبدیل می‌کنیم
           </motion.p>
@@ -254,13 +254,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center px-4"
           >
             <motion.a
               href="#contact"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl text-xl font-bold overflow-hidden shadow-2xl"
+              className="group relative px-6 sm:px-8 md:px-10 py-3 md:py-4 lg:py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl text-base sm:text-lg md:text-xl font-bold overflow-hidden shadow-2xl"
             >
               <span className="relative z-10">شروع پروژه</span>
               <motion.div
@@ -275,7 +275,7 @@ export default function Home() {
               href="#portfolio"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}
-              className="group px-10 py-5 border-2 border-white/30 hover:border-white/50 text-white rounded-2xl text-xl font-bold transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
+              className="group px-6 sm:px-8 md:px-10 py-3 md:py-4 lg:py-5 border-2 border-white/30 hover:border-white/50 text-white rounded-2xl text-base sm:text-lg md:text-xl font-bold transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
             >
               مشاهده نمونه کارها
             </motion.a>
@@ -285,17 +285,17 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+            className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2"
           >
-            <ArrowDownIcon className="h-8 w-8 text-blue-400 animate-bounce" />
+            <ArrowDownIcon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-blue-400 animate-bounce" />
           </motion.div>
         </motion.div>
       </section>
 
       {/* Stats Section with Glassmorphism */}
-      <section className="py-24 px-4 bg-gradient-to-b from-gray-900 to-black relative">
+      <section className="py-12 md:py-16 lg:py-24 px-4 bg-gradient-to-b from-gray-900 to-black relative">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -305,12 +305,12 @@ export default function Home() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="text-center group"
               >
-                <div className="relative p-6 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative p-4 sm:p-6 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-5xl md:text-6xl font-black text-gradient-primary mb-2">{stat.number}</div>
-                  <div className="text-gray-400 font-medium">{stat.label}</div>
+                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gradient-primary mb-2">{stat.number}</div>
+                  <div className="text-gray-400 font-medium text-sm sm:text-base">{stat.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -319,18 +319,18 @@ export default function Home() {
       </section>
 
       {/* Services Section with 3D Cards */}
-      <section className="py-24 px-4 bg-black relative">
+      <section className="py-12 md:py-16 lg:py-24 px-4 bg-black relative">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-black mb-20 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-8 md:mb-12 lg:mb-20 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
           >
             خدمات ما
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {services.map((service) => (
               <motion.div
                 key={service.title}
@@ -344,12 +344,12 @@ export default function Home() {
                 }}
                 className="group perspective-1000"
               >
-                <div className="relative p-8 rounded-3xl backdrop-blur-md bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-white/10 hover:border-white/20 transition-all duration-500 h-full">
-                  <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="relative p-4 sm:p-6 md:p-8 rounded-3xl backdrop-blur-md bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-white/10 hover:border-white/20 transition-all duration-500 h-full">
+                  <div className="mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gradient-primary">{service.title}</h3>
-                  <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 md:mb-4 text-gradient-primary">{service.title}</h3>
+                  <p className="text-gray-400 mb-4 md:mb-6 leading-relaxed text-sm sm:text-base">{service.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature) => (
                       <span
@@ -371,18 +371,18 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section with Advanced Cards */}
-      <section id="portfolio" ref={ref} className="py-24 px-4 bg-gradient-to-b from-black to-gray-900 relative">
+      <section id="portfolio" ref={ref} className="py-12 md:py-16 lg:py-24 px-4 bg-gradient-to-b from-black to-gray-900 relative">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-black mb-20 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-8 md:mb-12 lg:mb-20 text-center bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
           >
             نمونه کارهای ما
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {portfolio.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -451,13 +451,13 @@ export default function Home() {
       </section>
 
       {/* Contact Section with Glassmorphism */}
-      <section id="contact" className="py-24 px-4 bg-gradient-to-b from-gray-900 to-black relative">
+      <section id="contact" className="py-12 md:py-16 lg:py-24 px-4 bg-gradient-to-b from-gray-900 to-black relative">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 lg:mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
           >
             بیایید با هم صحبت کنیم
           </motion.h2>
@@ -466,13 +466,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-400 mb-16 text-xl leading-relaxed max-w-3xl mx-auto"
+            className="text-gray-400 mb-8 md:mb-12 lg:mb-16 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto px-4"
           >
             آماده‌ایم تا رویای دیجیتال شما را با <span className="text-gradient-primary font-semibold">خلاقیت</span> و <span className="text-gradient-secondary font-semibold">تخصص</span> به واقعیت تبدیل کنیم. با ما تماس بگیرید!
           </motion.p>
           
           {/* Contact Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mb-8 md:mb-12 lg:mb-16">
             {[
               { icon: PhoneIcon, title: "تماس تلفنی", info: "+98 912 123 4567", color: "from-blue-500 to-cyan-500" },
               { icon: EnvelopeIcon, title: "ایمیل", info: "info@famirwebdesign.com", color: "from-purple-500 to-pink-500" },
@@ -486,12 +486,12 @@ export default function Home() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="group"
               >
-                <div className="relative p-6 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${contact.color} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <contact.icon className="h-6 w-6 text-white" />
+                <div className="relative p-4 sm:p-6 rounded-3xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                  <div className={`inline-flex p-2 sm:p-3 rounded-xl bg-gradient-to-r ${contact.color} mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <contact.icon className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                   </div>
-                  <h3 className="font-bold mb-2 text-lg">{contact.title}</h3>
-                  <p className="text-gray-400">{contact.info}</p>
+                  <h3 className="font-bold mb-2 text-base sm:text-lg">{contact.title}</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">{contact.info}</p>
                 </div>
               </motion.div>
             ))}
@@ -505,7 +505,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-cyan-600 hover:via-blue-600 hover:to-purple-600 text-white px-16 py-5 rounded-2xl text-xl font-bold transition-all duration-500 shadow-2xl hover:shadow-blue-500/25"
+            className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-cyan-600 hover:via-blue-600 hover:to-purple-600 text-white px-8 sm:px-12 md:px-16 py-3 md:py-4 lg:py-5 rounded-2xl text-base sm:text-lg md:text-xl font-bold transition-all duration-500 shadow-2xl hover:shadow-blue-500/25"
           >
             شروع پروژه جدید
           </motion.a>
@@ -539,17 +539,17 @@ export default function Home() {
       />
 
       {/* Footer with Gradient */}
-      <footer className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black border-t border-white/10">
+      <footer className="py-8 md:py-12 lg:py-16 px-4 bg-gradient-to-b from-gray-900 to-black border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl font-black text-gradient-primary mb-6"
+            className="text-2xl sm:text-3xl font-black text-gradient-primary mb-4 md:mb-6"
           >
             FamirWebDesign
           </motion.div>
-          <p className="text-gray-400 mb-8 text-lg">طراحی وب حرفه‌ای با عشق و تخصص</p>
+          <p className="text-gray-400 mb-4 md:mb-6 lg:mb-8 text-base sm:text-lg">طراحی وب حرفه‌ای با عشق و تخصص</p>
           <div className="text-gray-500 text-sm">
             © 2024 FamirWebDesign. تمامی حقوق محفوظ است.
           </div>
