@@ -112,7 +112,8 @@ const portfolio = [
     technologies: ["Next.js", "Node.js", "MongoDB", "Stripe"],
     category: "E-commerce",
     gradient: "from-pink-500 to-rose-500",
-    emoji: "💄"
+    emoji: "💄",
+    link: "https://ghertibeauty.com"
   },
   {
     title: "سایت شرکت ساختمانی",
@@ -121,7 +122,8 @@ const portfolio = [
     technologies: ["React", "Tailwind CSS", "Framer Motion"],
     category: "Corporate",
     gradient: "from-orange-500 to-red-500",
-    emoji: "🏗️"
+    emoji: "🏗️",
+    link: "https://example-construction.com"
   },
   {
     title: "اپلیکیشن مدیریت رستوران",
@@ -130,7 +132,8 @@ const portfolio = [
     technologies: ["React Native", "Firebase", "Node.js"],
     category: "Mobile App",
     gradient: "from-yellow-500 to-orange-500",
-    emoji: "🍕"
+    emoji: "🍕",
+    link: "https://restaurant-app.com"
   },
   {
     title: "سایت خبری",
@@ -139,7 +142,8 @@ const portfolio = [
     technologies: ["Next.js", "PostgreSQL", "Prisma"],
     category: "News",
     gradient: "from-blue-500 to-indigo-500",
-    emoji: "📰"
+    emoji: "📰",
+    link: "https://news-platform.com"
   },
   {
     title: "پلتفرم آموزشی",
@@ -148,7 +152,8 @@ const portfolio = [
     technologies: ["Vue.js", "Node.js", "MongoDB"],
     category: "Education",
     gradient: "from-green-500 to-teal-500",
-    emoji: "🎓"
+    emoji: "🎓",
+    link: "https://education-platform.com"
   },
   {
     title: "سایت شخصی هنرمند",
@@ -157,7 +162,8 @@ const portfolio = [
     technologies: ["React", "Three.js", "GSAP"],
     category: "Portfolio",
     gradient: "from-purple-500 to-violet-500",
-    emoji: "🎨"
+    emoji: "🎨",
+    link: "https://artist-portfolio.com"
   }
 ];
 
@@ -431,7 +437,7 @@ export default function Home() {
                     </div>
                     
                     <motion.a
-                      href="https://ghertibeauty.com"
+                      href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
