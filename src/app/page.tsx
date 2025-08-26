@@ -339,10 +339,9 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: service.delay }}
                 whileHover={{ 
                   scale: 1.05, 
-                  rotateY: 5, 
-                  z: 50 
+                  y: -5
                 }}
-                className="group perspective-1000"
+                className="group"
               >
                 <div className="relative p-4 sm:p-6 md:p-8 rounded-3xl backdrop-blur-md bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-white/10 hover:border-white/20 transition-all duration-500 h-full">
                   <div className="mb-4 md:mb-6 transform group-hover:scale-110 transition-transform duration-300">
@@ -390,11 +389,10 @@ export default function Home() {
                 animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ 
-                  scale: 1.05, 
-                  y: -10,
-                  rotateY: 5 
+                  scale: 1.02, 
+                  y: -5
                 }}
-                className="group perspective-1000"
+                className="group"
               >
                 <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-500 shadow-2xl">
                   {/* Project Image Placeholder */}
@@ -417,7 +415,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <div className="p-6">
+                  <div className="p-6 relative z-10">
                     <h3 className="text-xl font-bold mb-3 text-gradient-primary">{project.title}</h3>
                     <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
                     
@@ -438,14 +436,14 @@ export default function Home() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-cyan-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer block text-center"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-cyan-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer block text-center relative z-20"
                     >
                       مشاهده جزئیات
                     </motion.a>
                   </div>
                   
                   {/* Gradient Border Effect */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10"></div>
                 </div>
               </motion.div>
             ))}
