@@ -18,7 +18,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       "@type": "ListItem",
       "position": 1,
       "name": "خانه",
-      "item": "https://famir-web-design-5y2a.vercel.app/"
+      "item": "https://famir-web-design-5y2a.vercel.app"
     },
     ...items.map((item, index) => ({
       "@type": "ListItem",
